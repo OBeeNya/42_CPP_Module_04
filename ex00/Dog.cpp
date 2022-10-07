@@ -1,19 +1,22 @@
 #include "Dog.hpp"
 
 Dog::Dog(void):
-	AAnimal("Dog")
+	Animal("Dog")
 {
+	std::cout << "Dog default constructor called" << std::endl;
 	return ;
 }
 
 Dog::Dog(const Dog &src)
 {
+	std::cout << "Dog copy constructor called" << std::endl;
 	*this = src;
 	return ;
 }
 
 Dog::~Dog(void)
 {
+	std::cout << "Dog default destructor called" << std::endl;
 	return ;
 }
 

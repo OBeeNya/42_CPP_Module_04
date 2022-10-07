@@ -17,7 +17,6 @@ Animal::Animal(const Animal &src)
 Animal::~Animal(void)
 {
 	std::cout << "Animal default destructor called" << std::endl;
-	delete this->_brain;
 	return ;
 }
 

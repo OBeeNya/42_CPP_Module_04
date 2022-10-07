@@ -1,13 +1,13 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "AAnimal.hpp"
+# include "Animal.hpp"
 
 class	Cat:
-	public AAnimal
+	public Animal
 {
 
-		public:
+	public:
 
 		Cat(void);
 		Cat(const Cat &src);

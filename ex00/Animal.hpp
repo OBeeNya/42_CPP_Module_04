@@ -3,7 +3,6 @@
 
 # include <string>
 # include <iostream>
-# include "Brain.hpp"
 
 class	Animal
 {
@@ -23,10 +22,6 @@ class	Animal
 	protected:
 
 		std::string	type;
-
-	private:
-
-		Brain	*_brain;
 
 };
 

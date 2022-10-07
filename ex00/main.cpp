@@ -7,8 +7,8 @@ int	main(void)
 	{
 		std::cout << " *** Testing good implementation *** " << std::endl;
 
-		const AAnimal	*dog = new Dog;
-		const AAnimal	*cat = new Cat;
+		const Animal	*dog = new Dog;
+		const Animal	*cat = new Cat;
 
 		std::cout << "Dog type is: ";
 		std::cout << dog->getType() << std::endl;
@@ -25,6 +25,7 @@ int	main(void)
 	}
 
 	{
+		std::cout << std::endl;
 		std::cout << " *** Testing bad implementation *** " << std::endl;
 
 		const WrongAnimal	*wrongCat = new WrongCat;

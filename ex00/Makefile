@@ -2,7 +2,7 @@
 NAME =				poly
 
 SRCS =				main.cpp \
-					AAnimal.cpp \
+					Animal.cpp \
 					Dog.cpp \
 					Cat.cpp \
 					WrongAnimal.cpp \
