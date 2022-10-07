@@ -4,7 +4,9 @@ NAME =				poly
 SRCS =				main.cpp \
 					AAnimal.cpp \
 					Dog.cpp \
-					Cat.cpp
+					Cat.cpp \
+					WrongAnimal.cpp \
+					WrongCat.cpp
 
 OBJS =				${SRCS:.cpp=.o}
 
