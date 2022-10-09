@@ -1,19 +1,43 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongCat.hpp"
 
 int	main(void)
 {
-	const AAnimal	*dog = new Dog;
-	const AAnimal	*cat = new Cat;
+	{
+		std::cout << " *** Testing good implementation *** " << std::endl;
 
-	std::cout << dog->getType() << std::endl;
-	std::cout << cat->getType() << std::endl;
+		const Animal	*dog = new Dog;
+		const Animal	*cat = new Cat;
 
-	dog->makeSound();
-	cat->makeSound();
+		std::cout << "Dog type is: ";
+		std::cout << dog->getType() << std::endl;
+		std::cout << "Cat type is: ";
+		std::cout << cat->getType() << std::endl;
 
-	delete dog;
-	delete cat;
+		std::cout << "Dog goes: ";
+		dog->makeSound();
+		std::cout << "Cat goes: ";
+		cat->makeSound();
+
+		delete dog;
+		delete cat;
+	}
+
+	{
+		std::cout << std::endl;
+		std::cout << " *** Testing bad implementation *** " << std::endl;
+
+		const WrongAnimal	*wrongCat = new WrongCat;
+
+		std::cout << "WrongCat type is: ";
+		std::cout << wrongCat->getType() << std::endl;
+
+		std::cout << "WrongCat goes: ";
+		wrongCat->makeSound();
+
+		delete wrongCat;
+	}
 
 	return (0);
 }

@@ -1,18 +1,18 @@
 
-NAME =				poly
+NAME =				materia
 
 SRCS =				main.cpp \
-					Animal.cpp \
-					Dog.cpp \
-					Cat.cpp \
-					WrongAnimal.cpp \
-					WrongCat.cpp
+					AMateria.cpp \
+					Ice.cpp \
+					ICharacter.cpp \
+					Cure.cpp \
+					Character.cpp
 
 OBJS =				${SRCS:.cpp=.o}
 
 C++ =				c++
 
-FLAGS =				-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
+FLAGS =				-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98 -g3
 
 RM =				rm -rf
 

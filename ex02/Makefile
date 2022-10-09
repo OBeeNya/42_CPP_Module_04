@@ -1,18 +1,17 @@
 
-NAME =				poly
+NAME =				aanimal
 
 SRCS =				main.cpp \
-					Animal.cpp \
+					AAnimal.cpp \
 					Dog.cpp \
 					Cat.cpp \
-					WrongAnimal.cpp \
-					WrongCat.cpp
+					Brain.cpp
 
 OBJS =				${SRCS:.cpp=.o}
 
 C++ =				c++
 
-FLAGS =				-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
+FLAGS =				-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98 -g3
 
 RM =				rm -rf
 
