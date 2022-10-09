@@ -42,6 +42,7 @@ Brain	Cat::getBrain(void) const
 {
 	return (*this->_brain);
 }
+<<<<<<< HEAD
 
 void	Cat::setIdea(unsigned int i, std::string idea)
 {
@@ -52,3 +53,5 @@ std::string	Cat::getIdea(unsigned int i)
 {
 	return (this->_brain->getIdea(i));
 }
+=======
+>>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869

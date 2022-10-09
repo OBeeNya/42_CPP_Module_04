@@ -17,6 +17,10 @@ Animal::Animal(const Animal &src)
 Animal::~Animal(void)
 {
 	std::cout << "Animal default destructor called" << std::endl;
+<<<<<<< HEAD
+=======
+	delete this->_brain;
+>>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
 	return ;
 }
 
@@ -31,7 +35,10 @@ Animal	&Animal::operator=(const Animal &rhs)
 Animal::Animal(const std::string type):
 	type(type)
 {
+<<<<<<< HEAD
 	std::cout << "Animal string constructor called" << std::endl;
+=======
+>>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
 	return ;
 }
 
