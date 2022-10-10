@@ -22,9 +22,6 @@ Ice::~Ice(void)
 
 Ice	&Ice::operator=(const Ice &rhs)
 {
-	if (this == &rhs)
-		return (*this);
-	this->type = rhs.getType();
 	return (*this);
 }
 

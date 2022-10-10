@@ -12,6 +12,11 @@ Character::Character(const Character &src):
 	_name(src.getName())
 {
 	std::cout << "Character copy constructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (src._materias[i])
+			this->_materias[i] = src._materias[i]->clone();
+	}
 	return ;
 }
 
@@ -26,6 +31,11 @@ Character::Character(const std::string name):
 Character::~Character(void)
 {
 	std::cout << "Character default destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materias[i])
+			delete this->_materias[i];
+	}
 	return ;
 }
 
@@ -36,7 +46,7 @@ Character	&Character::operator=(const Character &rhs)
 	this->_name = rhs.getName();
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_materias[i])
+		if (this->_materias && this->_materias[i])
 			delete this->_materias[i];
 	}
 	for (int i = 0; i < 4; i++)
@@ -56,11 +66,14 @@ void	Character::equip(AMateria *m)
 {
 	if (!this->_materias[0])
 		this->_materias[0] = m;
-	else if (!this->_materias[1])	
+	else if (!this->_materias[1] && this->_materias[0]->getType() != m->getType())	
 		this->_materias[1] = m;
-	else if (!this->_materias[2])	
+	else if (!this->_materias[2] && this->_materias[0]->getType() != m->getType() \
+		&& this->_materias[1]->getType() != m->getType())	
 		this->_materias[2] = m;
-	else if (!this->_materias[3])	
+	else if (!this->_materias[3] && this->_materias[0]->getType() != m->getType() \
+		&& this->_materias[1]->getType() != m->getType() \
+		&& this->_materias[2]->getType() != m->getType())	
 		this->_materias[3] = m;
 }
 

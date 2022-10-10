@@ -22,9 +22,6 @@ Cure::~Cure(void)
 
 Cure	&Cure::operator=(const Cure &rhs)
 {
-	if (this == &rhs)
-		return (*this);
-	this->type = rhs.getType();
 	return (*this);
 }
 
