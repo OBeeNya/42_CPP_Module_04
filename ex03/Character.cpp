@@ -2,7 +2,7 @@
 
 Character::Character(void):
 	ICharacter(),
-	_materias({NULL, NULL, NULL, NULL})
+	_materias{NULL, NULL, NULL, NULL}
 {
 	std::cout << "Character default constructor called" << std::endl;
 	return ;
@@ -17,7 +17,7 @@ Character::Character(const Character &src):
 
 Character::Character(const std::string name):
 	_name(name),
-	_materias({NULL, NULL, NULL, NULL})
+	_materias{NULL, NULL, NULL, NULL}
 {
 	std::cout << "Character string constructor called" << std::endl;
 	return ;
@@ -26,11 +26,6 @@ Character::Character(const std::string name):
 Character::~Character(void)
 {
 	std::cout << "Character default destructor called" << std::endl;
-	for (int i = 0; i < 4; i++)
-	{
-		if (this->_materias[i])
-			delete this->_materias[i];
-	}
 	return ;
 }
 
@@ -77,6 +72,6 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter &target)
 {
-	if (idx >= 0 && idx < 4)
+	if (idx >= 0 && idx < 4 && this->_materias[idx])
 		this->_materias[idx]->use(target);
 }

@@ -39,3 +39,8 @@ const std::string	&AMateria::getType(void) const
 {
 	return (this->type);
 }
+
+void	AMateria::use(ICharacter &target)
+{
+	return ;
+}
