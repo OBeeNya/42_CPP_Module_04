@@ -5,6 +5,7 @@
 int	main(void)
 {
 	{
+		std::cout << std::endl;
 		std::cout << " *** Testing good implementation *** " << std::endl;
 
 		const Animal	*dog = new Dog;
@@ -38,6 +39,8 @@ int	main(void)
 
 		delete wrongCat;
 	}
+
+	std::cout << std::endl;
 
 	return (0);
 }

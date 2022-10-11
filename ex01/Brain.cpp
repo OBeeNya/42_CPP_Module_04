@@ -24,7 +24,6 @@ Brain	&Brain::operator=(const Brain &rhs)
 	if (this == &rhs)
 		return (*this);
 	for (int i = 0; i < 100; i++)
-<<<<<<< HEAD
 		this->_ideas[i] = rhs.getIdea(i);
 	return (*this);
 }
@@ -43,13 +42,3 @@ void	Brain::setIdea(unsigned int i, std::string idea)
 	else
 		std::cout << "Error" << std::endl << "Index out of range" << std::endl;
 }
-=======
-		this->_ideas[i] = rhs.getIdeas(i);
-	return (*this);
-}
-
-std::string	Brain::getIdeas(unsigned int i) const
-{
-	return (this->_ideas[i]);
-}
->>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869

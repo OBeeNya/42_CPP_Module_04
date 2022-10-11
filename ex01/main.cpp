@@ -5,19 +5,15 @@ int	main(void)
 {
 	Animal	*animals[100];
 
-<<<<<<< HEAD
 	std::cout << " *** Creating 50 dogs then 50 cats from Animal class *** " \
 	<< std::endl;
 
-=======
->>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
 	for (int i = 0; i < 50; i++)
 		animals[i] = new Dog();
 
 	for (int i = 50; i < 100; i++)
 		animals[i] = new Cat();
 
-<<<<<<< HEAD
 	std::cout << std::endl;
 	std::cout << " *** Checking their types *** " << std::endl;
 
@@ -46,15 +42,6 @@ int	main(void)
 
 	std::cout << std::endl;
 	std::cout << " *** Cleaning *** " << std::endl;
-=======
-	for (int i = 0; i < 100; i++)
-	{
-		std::cout << "This animal type is ";
-		animals[i]->getType();
-		std::cout << "." << std::endl;
-	}
->>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
-
 	for (int i = 0; i < 100; i++)
 		delete animals[i];
 

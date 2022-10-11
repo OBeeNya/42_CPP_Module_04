@@ -66,14 +66,11 @@ void	Character::equip(AMateria *m)
 {
 	if (!this->_materias[0])
 		this->_materias[0] = m;
-	else if (!this->_materias[1] && this->_materias[0]->getType() != m->getType())	
+	else if (!this->_materias[1])	
 		this->_materias[1] = m;
-	else if (!this->_materias[2] && this->_materias[0]->getType() != m->getType() \
-		&& this->_materias[1]->getType() != m->getType())	
+	else if (!this->_materias[2])	
 		this->_materias[2] = m;
-	else if (!this->_materias[3] && this->_materias[0]->getType() != m->getType() \
-		&& this->_materias[1]->getType() != m->getType() \
-		&& this->_materias[2]->getType() != m->getType())	
+	else if (!this->_materias[3])	
 		this->_materias[3] = m;
 }
 

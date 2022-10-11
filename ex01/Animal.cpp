@@ -1,13 +1,15 @@
 #include "Animal.hpp"
 
 Animal::Animal(void):
-	type("")
+	type(""),
+	_brain(NULL)
 {
 	std::cout << "Animal default constructor called" << std::endl;
 	return ;
 }
 
-Animal::Animal(const Animal &src)
+Animal::Animal(const Animal &src):
+	_brain(NULL)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
 	*this = src;
@@ -17,10 +19,8 @@ Animal::Animal(const Animal &src)
 Animal::~Animal(void)
 {
 	std::cout << "Animal default destructor called" << std::endl;
-<<<<<<< HEAD
-=======
-	delete this->_brain;
->>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
+	if (this->_brain)
+		delete this->_brain;
 	return ;
 }
 
@@ -33,12 +33,10 @@ Animal	&Animal::operator=(const Animal &rhs)
 }
 
 Animal::Animal(const std::string type):
-	type(type)
+	type(type),
+	_brain(NULL)
 {
-<<<<<<< HEAD
 	std::cout << "Animal string constructor called" << std::endl;
-=======
->>>>>>> 6ef714d6a892af0e2e2fd7ce9bb5eabd44628869
 	return ;
 }
 
